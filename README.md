@@ -28,6 +28,8 @@
     Non-free algorithms:         NO
   ```
 
+## The [prebuilt WHLs are available here](https://github.com/rathaumons/pyppbox-custpkg)!
+
 ## Manual build note:
 
 * Install [cuda](https://developer.nvidia.com/cuda-downloads) & [cudnn](https://developer.nvidia.com/rdp/cudnn-download)
@@ -36,6 +38,7 @@
   ```
   pip install numpy>=1.24.3
   ```
+* Download sources [opencv](https://github.com/opencv/opencv/tags) & [opencv_contrib](https://github.com/opencv/opencv_contrib/tags)
 * Terminal `cmd` -> Set base vars (opencv 4.7.0)
   ```
   set "cvsource=D:\DEV\opencv\build\opencv-4.7.0"
@@ -110,8 +113,8 @@
   - Copy `.../cvbuild/install/x64/vc16/bin/*` to [`cv2`](cv2)
   - Copy `.../cvbuild/lib/python3/Release/cv2.pyd` to [`cv2`](cv2)
   - Verify all files in [`cv2`](cv2) with [`pyd_dll`](cv2/pyd_dll)
-  - Verify the `cuda` path in file [`config.py`](cv2/config.py)
-  - Create WHL: `creat_whl.cmd`
+  - Verify the cuda toolkit path in [`config.py`](cv2/config.py)
+  - Create WHL -> Run [`creat_whl.cmd`](creat_whl.cmd)
 * Test your `cv2`
   ```
   import cv2
