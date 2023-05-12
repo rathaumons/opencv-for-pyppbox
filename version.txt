@@ -1,0 +1,4 @@
+opencv_version = "4.7.0"
+contrib = True
+headless = False
+ci_build = False
