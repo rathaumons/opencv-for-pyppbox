@@ -91,7 +91,7 @@
   -DBUILD_opencv_cudastereo=OFF ^
   -DBUILD_opencv_cudawarping=OFF ^
   ```
-* Termianl `cmd` -> Config `nonfree` modules (Optional)
+* Terminal `cmd` -> Config `nonfree` modules (Optional)
   ```
   -DOPENCV_ENABLE_NONFREE=ON -DBUILD_opencv_rgbd=OFF ^
   ```
@@ -105,7 +105,7 @@
   -DPYTHON3_PACKAGES_PATH="C:/dev/exc/python/p310/Lib/site-packages" ^
   -DBUILD_opencv_python3=ON
   ```
-* Termianl `cmd` -> Build cmake
+* Terminal `cmd` -> Build cmake
   ```
   cmake --build %cvbuild% --target INSTALL --config Release
   ```
