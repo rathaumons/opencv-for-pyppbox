@@ -13,7 +13,7 @@ def main():
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
     install_requires = [
-        'numpy>=1.24.3; python_version>="3.10"'
+        'numpy>=1.24.4; python_version=="3.10"'
     ]
 
     version = set_version()
@@ -49,7 +49,7 @@ def main():
         package_data=package_data,
         maintainer="rathaROG",
         install_requires=install_requires,
-        python_requires=">=3.10",
+        python_requires="==3.10",
         classifiers=[
             "Development Status :: 5 - Production/Stable",
             "Environment :: Console",
