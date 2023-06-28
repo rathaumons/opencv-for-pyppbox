@@ -102,9 +102,9 @@
   cmake --build %cvbuild% --target INSTALL --config Release
   ```
 * Make ready & create WHL
-  - Copy `cvbuild/install/x64/vc16/bin/*` to [`cv2`](cv2)
-  - Copy `cvbuild/lib/python3/Release/cv2.pyd` to [`cv2`](cv2)
-  - Verify all files in [`cv2`](cv2) with [`pyd_dll`](cv2/pyd_dll)
+  - Copy `cvbuild/install/x64/vc16/bin/*` to [`cv2/python-3`](cv2/python-3)
+  - Copy `cvbuild/lib/python3/Release/cv2.pyd` to [`cv2/python-3`](cv2/python-3)
+  - Verify all files in [`cv2/python-3`](cv2/python-3) with [`pyd_dll`](cv2/python-3/pyd_dll)
   - Verify the cuda toolkit path in [`config.py`](cv2/config.py)
   - Create WHL -> Run [`create_whl.cmd`](create_whl.cmd)
 * Test your `cv2`
