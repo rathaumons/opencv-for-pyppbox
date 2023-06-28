@@ -1,20 +1,14 @@
-# OpenCV - Customized for [`pyppbox`](https://github.com/rathaumons/pyppbox)
+# Customized OpenCV for [`pyppbox`](https://github.com/rathaumons/pyppbox)
 
 ##  `pyppbox-opencv` | `opencv-contrib-python` | `cv2`
 
-* Updated: **May 12, 2023**
-* Requires `numpy>=1.24.3`
-* Uses the default path of CUDA & CUDNN `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\vxx.x`. 
-* If your CUDA & CUDNN were installed in a different location, simply modify the `YOUR_PYTHON\Lib\site-packages\cv2\config.py` accordingly.
-* The supported hardware for Python 3.9/3.10 + **CUDA 11.8+**:
+* Updated: **June 28, 2023**
+* Requirements: `['numpy>=1.24.4; python_version=="3.10"']`,
+* Uses the default path of CUDA & CUDNN `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8`. 
+* The supported hardware for **Python 3.10** + **CUDA 11.8**:
   ```
   NVIDIA GPU arch: 60 61 70 75 80 86 89
   NVIDIA PTX archs: 60 61 70 75 80 86 89
-  ```
-* The supported hardware for Python 3.9/3.10 + **CUDA 11.7**:
-  ```
-  NVIDIA GPU arch: 60 61 70 75 80 86
-  NVIDIA PTX archs: 60 61 70 75 80 86
   ```
 * OpenCV modules:
   ```
@@ -28,21 +22,19 @@
     Non-free algorithms:         NO
   ```
 
-## The [prebuilt WHLs are available here](https://github.com/rathaumons/pyppbox-custpkg)!
+## My Build Notes:
 
-## Manual build note:
-
-* Install [cuda](https://developer.nvidia.com/cuda-downloads) & [cudnn](https://developer.nvidia.com/rdp/cudnn-download)
-* Install [python](https://www.python.org/downloads/windows/)
-* Terminal `cmd` -> Install `numpy`
+* Install [CUDA 11.8](https://developer.nvidia.com/cuda-downloads) & [cuDNN 8.9](https://developer.nvidia.com/rdp/cudnn-download)
+* Install [Python 3.10](https://www.python.org/downloads/windows/)
+* Terminal `cmd` -> Install `numpy==1.24.4`
   ```
-  pip install numpy>=1.24.3
+  pip install numpy==1.24.4
   ```
 * Download sources [opencv](https://github.com/opencv/opencv/tags) & [opencv_contrib](https://github.com/opencv/opencv_contrib/tags)
-* Terminal `cmd` -> Set base vars (opencv 4.7.0)
+* Terminal `cmd` -> Set base vars (opencv 4.8.0)
   ```
-  set "cvsource=D:\DEV\opencv\build\opencv-4.7.0"
-  set "cvextmodules=D:\DEV\opencv\build\opencv_contrib-4.7.0\modules"
+  set "cvsource=opencv-4.8.0"
+  set "cvextmodules=opencv_contrib-4.8.0\modules"
   set "cvbuild=%cvsource%\cvbuild"
   set "bt=Release"
   set "gt=Visual Studio 16 2019"
@@ -110,11 +102,11 @@
   cmake --build %cvbuild% --target INSTALL --config Release
   ```
 * Make ready & create WHL
-  - Copy `.../cvbuild/install/x64/vc16/bin/*` to [`cv2`](cv2)
-  - Copy `.../cvbuild/lib/python3/Release/cv2.pyd` to [`cv2`](cv2)
+  - Copy `cvbuild/install/x64/vc16/bin/*` to [`cv2`](cv2)
+  - Copy `cvbuild/lib/python3/Release/cv2.pyd` to [`cv2`](cv2)
   - Verify all files in [`cv2`](cv2) with [`pyd_dll`](cv2/pyd_dll)
   - Verify the cuda toolkit path in [`config.py`](cv2/config.py)
-  - Create WHL -> Run [`creat_whl.cmd`](creat_whl.cmd)
+  - Create WHL -> Run [`create_whl.cmd`](create_whl.cmd)
 * Test your `cv2`
   ```
   import cv2
