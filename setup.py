@@ -13,7 +13,7 @@ def main():
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
     install_requires = [
-        'numpy>=1.24.4; python_version=="3.10"'
+        'numpy>=1.24.4; python_version=="3.9"'
     ]
 
     version = set_version()
