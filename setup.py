@@ -13,7 +13,7 @@ def main():
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
     install_requires = [
-        'numpy>=1.24.4; python_version=="3.10.*"'
+        'numpy>=1.24.4; python_version=="3.11.*"'
     ]
 
     version = set_version()
@@ -49,7 +49,7 @@ def main():
         package_data=package_data,
         maintainer="rathaROG",
         install_requires=install_requires,
-        python_requires="==3.10.*",
+        python_requires="==3.11.*",
         classifiers=[
             "Development Status :: 5 - Production/Stable",
             "Environment :: Console",
@@ -62,7 +62,7 @@ def main():
             "Programming Language :: Python",
             "Programming Language :: Python :: 3",
             "Programming Language :: Python :: 3 :: Only",
-            "Programming Language :: Python :: 3.10",
+            "Programming Language :: Python :: 3.11",
             "Programming Language :: C++",
             "Programming Language :: Python :: Implementation :: CPython",
             "Topic :: Scientific/Engineering",
@@ -84,7 +84,7 @@ def set_version():
 def set_wheel_tags(force=True):
     if force:
         import sys
-        sys.argv.extend(['--python-tag', 'cp310'])
+        sys.argv.extend(['--python-tag', 'cp311'])
         sys.argv.extend(['--plat-name', 'win_amd64'])
 
 if __name__ == "__main__":

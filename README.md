@@ -3,9 +3,9 @@
 ##  `pyppbox-opencv` | `opencv-contrib-python` | `cv2`
 
 * Updated: **June 28, 2023**
-* Requirements: `['numpy>=1.24.4; python_version=="3.10"']`,
+* Requirements: `['numpy>=1.24.4; python_version=="3.11"']`,
 * Uses the default path of CUDA & CUDNN `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8`. 
-* The supported hardware for **Python 3.10** + **CUDA 11.8**:
+* The supported hardware for **Python 3.11** + **CUDA 11.8**:
   ```
   NVIDIA GPU arch: 60 61 70 75 80 86 89
   NVIDIA PTX archs: 60 61 70 75 80 86 89
@@ -25,7 +25,7 @@
 ## My Build Notes:
 
 * Install [CUDA 11.8](https://developer.nvidia.com/cuda-downloads) & [cuDNN 8.9](https://developer.nvidia.com/rdp/cudnn-download)
-* Install [Python 3.10](https://www.python.org/downloads/windows/)
+* Install [Python 3.11](https://www.python.org/downloads/windows/)
 * Terminal `cmd` -> Install `numpy==1.24.4`
   ```
   pip install numpy==1.24.4
@@ -87,14 +87,14 @@
   ```
   -DOPENCV_ENABLE_NONFREE=ON -DBUILD_opencv_rgbd=OFF ^
   ```
-* Terminal `cmd` -> Config python (3.10)
+* Terminal `cmd` -> Config python (3.11)
   ```
   -DPYTHON3_LIMITED_API=ON ^
-  -DPYTHON3_EXECUTABLE="C:/dev/exc/python/p310/python.exe" ^
-  -DPYTHON3_INCLUDE_DIR="C:/dev/exc/python/p310/include" ^
-  -DPYTHON3_LIBRARY="C:/dev/exc/python/p310/libs/python310.lib" ^
-  -DPYTHON3_NUMPY_INCLUDE_DIRS="C:/dev/exc/python/p310/lib/site-packages/numpy/core/include" ^
-  -DPYTHON3_PACKAGES_PATH="C:/dev/exc/python/p310/Lib/site-packages" ^
+  -DPYTHON3_EXECUTABLE="C:/dev/exc/python/p311/python.exe" ^
+  -DPYTHON3_INCLUDE_DIR="C:/dev/exc/python/p311/include" ^
+  -DPYTHON3_LIBRARY="C:/dev/exc/python/p311/libs/python311.lib" ^
+  -DPYTHON3_NUMPY_INCLUDE_DIRS="C:/dev/exc/python/p311/lib/site-packages/numpy/core/include" ^
+  -DPYTHON3_PACKAGES_PATH="C:/dev/exc/python/p311/Lib/site-packages" ^
   -DBUILD_opencv_python3=ON
   ```
 * Terminal `cmd` -> Build cmake
