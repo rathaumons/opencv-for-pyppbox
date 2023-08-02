@@ -3,7 +3,7 @@
 ##  `pyppbox-opencv` | `opencv-contrib-python` | `cv2`
 
 * Updated: **August 2, 2023**
-* Requirements: `['numpy>=1.23.5; python_version=="3.9.*"']`
+* Requirements: `['numpy>=1.23.5; python_version=="3.11.*"']`
 * CUDA & CUDNN are included in the package.
 * The supported hardware for **Python 3.11** + **CUDA 11.8**:
   ```
