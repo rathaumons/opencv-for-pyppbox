@@ -15,7 +15,7 @@ def main():
     long_description = io.open("README.md", encoding="utf-8").read()
     package_name = "pyppbox-opencv"
     package_data = {}
-    packages = find_packages() + ["cv2", "cv2.data", "cv2.gapi", "cv2.mat_wrapper", 
+    packages = find_packages() + ["cv2", "cv2.cuda_bin", "cv2.data", "cv2.gapi", "cv2.mat_wrapper", 
                                   "cv2.misc", "cv2.python-3", "cv2.utils"]
     packages = list(set(packages))
     for p in packages: package_data.update({p: ["*"]})
