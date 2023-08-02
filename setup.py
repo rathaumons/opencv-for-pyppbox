@@ -4,38 +4,25 @@
 import io
 import os
 import os.path
-import sysconfig
-from setuptools import setup
+from setuptools import find_packages, setup
 
 
 def main():
 
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-    install_requires = [
-        'numpy>=1.24.4; python_version=="3.11.*"'
-    ]
-
     version = set_version()
-    print("VERSION=" + str(version))
-
-    package_name = "pyppbox-opencv"
-
     long_description = io.open("README.md", encoding="utf-8").read()
+    package_name = "pyppbox-opencv"
+    package_data = {}
+    packages = find_packages() + ["cv2", "cv2.data", "cv2.gapi", "cv2.mat_wrapper", 
+                                  "cv2.misc", "cv2.python-3", "cv2.utils"]
+    packages = list(set(packages))
+    for p in packages: package_data.update({p: ["*"]})
 
-    packages = ["cv2", "cv2.data", "cv2.gapi", "cv2.mat_wrapper", "cv2.misc", "cv2.python-3", "cv2.utils"]
-
-    package_data = {
-        "cv2": ["*%s" % sysconfig.get_config_vars().get("SO")]
-        + (["*.dll"] if os.name == "nt" else [])
-        + ["LICENSE.txt", "LICENSE-3RD-PARTY.txt"],
-        "cv2.data": ["*.xml"],
-        "cv2.gapi": ["*.*"],
-        "cv2.mat_wrapper": ["*.*"],
-        "cv2.misc": ["*.*"],
-        "cv2.python-3": ["*.*"],
-        "cv2.utils": ["*.*"],
-    }
+    install_requires = [
+        'numpy>=1.23.5; python_version=="3.11.*"'
+    ]
 
     setup(
         name=package_name,
@@ -47,6 +34,7 @@ def main():
         long_description_content_type="text/markdown",
         packages=packages,
         package_data=package_data,
+        include_package_data=True,
         maintainer="rathaROG",
         install_requires=install_requires,
         python_requires="==3.11.*",
@@ -79,7 +67,6 @@ def set_version():
     with open(version_file) as fp:
         exec(fp.read(), version)
     return version["opencv_version"]
-
 
 def set_wheel_tags(force=True):
     if force:

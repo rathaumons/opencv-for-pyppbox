@@ -1,4 +1,4 @@
-opencv_version = "4.8.0.100"
+opencv_version = "4.8.0.101"
 contrib = True
 headless = False
 ci_build = False
