@@ -2,9 +2,9 @@
 
 ##  `pyppbox-opencv` | `opencv-contrib-python` | `cv2`
 
-* Updated: **June 28, 2023**
-* Requirements: `['numpy>=1.24.4; python_version=="3.10"']`,
-* Uses the default path of CUDA & CUDNN `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8`. 
+* Updated: **August 2, 2023**
+* Requirements: `['numpy>=1.23.5; python_version=="3.10.*"']`
+* CUDA & CUDNN are included in the package.
 * The supported hardware for **Python 3.10** + **CUDA 11.8**:
   ```
   NVIDIA GPU arch: 60 61 70 75 80 86 89
