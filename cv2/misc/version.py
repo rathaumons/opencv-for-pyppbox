@@ -5,4 +5,4 @@ import cv2
 
 
 def get_ocv_version():
-    return getattr(cv2, "__version__", "4.8.0.100")
+    return getattr(cv2, "__version__", "4.8.0.101")
