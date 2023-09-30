@@ -2,7 +2,7 @@
 
 ##  `pyppbox-opencv` | `opencv-contrib-python` | `cv2`
 
-* Updated: **August 2, 2023**
+* Updated: **September 30, 2023**
 * Requirements: `['numpy>=1.23.5; python_version=="3.11.*"']`
 * CUDA & cuDNN are included in the package.
 * The supported hardware for **Python 3.11** + **CUDA 11.8**:
@@ -26,15 +26,15 @@
 
 * Install [CUDA 11.8](https://developer.nvidia.com/cuda-downloads) & [cuDNN 8.9](https://developer.nvidia.com/rdp/cudnn-download)
 * Install [Python 3.11](https://www.python.org/downloads/windows/)
-* Terminal `cmd` -> Install `numpy==1.24.4`
+* Terminal `cmd` -> Install `numpy==1.23.5`
   ```
-  pip install numpy==1.24.4
+  pip install numpy==1.23.5
   ```
 * Download sources [opencv](https://github.com/opencv/opencv/tags) & [opencv_contrib](https://github.com/opencv/opencv_contrib/tags)
-* Terminal `cmd` -> Set base vars (opencv 4.8.0)
+* Terminal `cmd` -> Set base vars (opencv 4.x.x)
   ```
-  set "cvsource=opencv-4.8.0"
-  set "cvextmodules=opencv_contrib-4.8.0\modules"
+  set "cvsource=opencv-4.x.x"
+  set "cvextmodules=opencv_contrib-4.x.x\modules"
   set "cvbuild=%cvsource%\cvbuild"
   set "bt=Release"
   set "gt=Visual Studio 16 2019"
