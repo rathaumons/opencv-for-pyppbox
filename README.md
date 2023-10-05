@@ -5,7 +5,7 @@
 * Updated: **September 30, 2023**
 * Requirements: `['numpy>=1.23.5; python_version=="3.11.*"']`
 * CUDA & cuDNN are included in the package.
-* The supported hardware for **Python 3.11** + **CUDA 11.8**:
+* The supported hardware for **Python 3.11** + **CUDA 12.1**:
   ```
   NVIDIA GPU arch: 60 61 70 75 80 86 89
   NVIDIA PTX archs: 60 61 70 75 80 86 89
@@ -24,7 +24,7 @@
 
 ## My Build Notes:
 
-* Install [CUDA 11.8](https://developer.nvidia.com/cuda-downloads) & [cuDNN 8.9](https://developer.nvidia.com/rdp/cudnn-download)
+* Install [CUDA 12.1](https://developer.nvidia.com/cuda-downloads) & [cuDNN 8.9](https://developer.nvidia.com/rdp/cudnn-download)
 * Install [Python 3.11](https://www.python.org/downloads/windows/)
 * Terminal `cmd` -> Install `numpy==1.23.5`
   ```
@@ -56,7 +56,7 @@
   -DBUILD_opencv_apps=OFF ^
   -DBUILD_opencv_python2=OFF ^
   ```
-* Terminal `cmd` -> Add cuda 11.8
+* Terminal `cmd` -> Add cuda 12.1
   ```
   -DWITH_CUDA=ON ^
   -DWITH_NVCUVID=ON ^
@@ -64,7 +64,7 @@
   -DCUDA_ARCH_PTX="6.0 6.1 7.0 7.5 8.0 8.6 8.9" ^
   -DWITH_CUBLAS=ON ^
   -DCUDA_FAST_MATH=ON ^
-  -DCUDA_SDK_ROOT_DIR="C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8" ^
+  -DCUDA_SDK_ROOT_DIR="C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.1" ^
   -DOPENCV_DNN_CUDA=ON ^
   -DWITH_MFX=ON ^
   -DWITH_OPENGL=ON ^
