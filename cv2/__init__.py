@@ -1,10 +1,12 @@
 # GitHub: https://github.com/rathaumons/opencv-for-pyppbox
-# Copyright (C) 2023 rathaROG
+# Copyright (C) 2024 rathaROG
 
 import os
 import importlib
 import sys
 
+__version__ = '4.8.1.101+cu121'
+__author__ = 'Ratha SIV'
 __all__ = []
 
 try:

@@ -1,5 +1,5 @@
 # GitHub: https://github.com/rathaumons/opencv-for-pyppbox
-# Copyright (C) 2023 rathaROG
+# Copyright (C) 2024 rathaROG
 
 import io
 import os
@@ -21,7 +21,7 @@ def main():
     for p in packages: package_data.update({p: ["*"]})
 
     install_requires = [
-        'numpy>=1.23.5; python_version=="3.11.*"'
+        'numpy>=1.23.5; python_version=="3.12.*"'
     ]
 
     setup(
@@ -37,7 +37,7 @@ def main():
         include_package_data=True,
         maintainer="rathaROG",
         install_requires=install_requires,
-        python_requires="==3.11.*",
+        python_requires="==3.12.*",
         classifiers=[
             "Development Status :: 5 - Production/Stable",
             "Environment :: Console",
@@ -50,7 +50,7 @@ def main():
             "Programming Language :: Python",
             "Programming Language :: Python :: 3",
             "Programming Language :: Python :: 3 :: Only",
-            "Programming Language :: Python :: 3.11",
+            "Programming Language :: Python :: 3.12",
             "Programming Language :: C++",
             "Programming Language :: Python :: Implementation :: CPython",
             "Topic :: Scientific/Engineering",
@@ -71,7 +71,7 @@ def set_version():
 def set_wheel_tags(force=True):
     if force:
         import sys
-        sys.argv.extend(['--python-tag', 'cp311'])
+        sys.argv.extend(['--python-tag', 'cp312'])
         sys.argv.extend(['--plat-name', 'win_amd64'])
 
 if __name__ == "__main__":

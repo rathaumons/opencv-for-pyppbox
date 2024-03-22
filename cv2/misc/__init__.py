@@ -1,4 +1,4 @@
 # GitHub: https://github.com/rathaumons/opencv-for-pyppbox
-# Copyright (C) 2023 rathaROG
+# Copyright (C) 2024 rathaROG
 
 from .version import get_ocv_version

@@ -3,9 +3,9 @@
 ##  `pyppbox-opencv` | `opencv-contrib-python` | `cv2`
 
 * Updated: **October 6, 2023**
-* Requirements: `['numpy>=1.23.5; python_version=="3.11.*"']`
+* Requirements: `['numpy>=1.26.4; python_version=="3.12.*"']`
 * CUDA & cuDNN are included in the package.
-* The supported hardware for **Python 3.11** + **CUDA 12.1**:
+* The supported hardware for **Python 3.12** + **CUDA 12.1**:
   ```
   NVIDIA GPU arch: 60 61 70 75 80 86 89
   NVIDIA PTX archs: 60 61 70 75 80 86 89
@@ -24,17 +24,17 @@
 
 ## My Build Notes:
 
-* Install [CUDA 12.1](https://developer.nvidia.com/cuda-downloads) & [cuDNN 8.9](https://developer.nvidia.com/rdp/cudnn-download)
-* Install [Python 3.11](https://www.python.org/downloads/windows/)
-* Terminal `cmd` -> Install `numpy==1.23.5`
+* Install [CUDA 12.1](https://developer.nvidia.com/cuda-downloads) & [cuDNN 8.9](https://developer.nvidia.com/cudnn-downloads)
+* Install [Python 3.12](https://www.python.org/downloads/windows/)
+* Terminal `cmd` -> Install `numpy==1.26.4`
   ```
-  pip install numpy==1.23.5
+  pip install numpy==1.26.4
   ```
 * Download sources [opencv](https://github.com/opencv/opencv/tags) & [opencv_contrib](https://github.com/opencv/opencv_contrib/tags)
-* Terminal `cmd` -> Set base vars (opencv 4.x.x)
+* Terminal `cmd` -> Set base paths and vars (opencv 4.x.x)
   ```
-  set "cvsource=opencv-4.x.x"
-  set "cvextmodules=opencv_contrib-4.x.x\modules"
+  set "cvsource={Source path}\opencv-4.x.x"
+  set "cvextmodules={Source path}\opencv_contrib-4.x.x\modules"
   set "cvbuild=%cvsource%\cvbuild"
   set "bt=Release"
   set "gt=Visual Studio 16 2019"
@@ -87,14 +87,14 @@
   ```
   -DOPENCV_ENABLE_NONFREE=ON -DBUILD_opencv_rgbd=OFF ^
   ```
-* Terminal `cmd` -> Config python (3.11)
+* Terminal `cmd` -> Config python (3.12)
   ```
   -DPYTHON3_LIMITED_API=ON ^
-  -DPYTHON3_EXECUTABLE="C:/dev/exc/python/p311/python.exe" ^
-  -DPYTHON3_INCLUDE_DIR="C:/dev/exc/python/p311/include" ^
-  -DPYTHON3_LIBRARY="C:/dev/exc/python/p311/libs/python311.lib" ^
-  -DPYTHON3_NUMPY_INCLUDE_DIRS="C:/dev/exc/python/p311/lib/site-packages/numpy/core/include" ^
-  -DPYTHON3_PACKAGES_PATH="C:/dev/exc/python/p311/Lib/site-packages" ^
+  -DPYTHON3_EXECUTABLE="C:/dev/exc/python/p312/python.exe" ^
+  -DPYTHON3_INCLUDE_DIR="C:/dev/exc/python/p312/include" ^
+  -DPYTHON3_LIBRARY="C:/dev/exc/python/p312/libs/python312.lib" ^
+  -DPYTHON3_NUMPY_INCLUDE_DIRS="C:/dev/exc/python/p312/lib/site-packages/numpy/core/include" ^
+  -DPYTHON3_PACKAGES_PATH="C:/dev/exc/python/p312/Lib/site-packages" ^
   -DBUILD_opencv_python3=ON
   ```
 * Terminal `cmd` -> Build cmake
@@ -102,11 +102,11 @@
   cmake --build %cvbuild% --target INSTALL --config Release
   ```
 * Make ready & create WHL
+  - Copy `{Python path}/Lib/site-packages/cv2/*` to [`cv2`](cv2) (Execpt those already present in [`cv2`](cv2))
+  - Copy `cublas64_12.dll`, `cublasLt64_12.dll`, and `cudnn64_8.dll` from `{CUDA toolkit path}/CUDA/v12.1/bin` to [`cv2/cuda_bin`](cv2/cuda_bin) 
   - Copy `cvbuild/install/x64/vc16/bin/*` to [`cv2/python-3`](cv2/python-3)
-  - Copy `cvbuild/lib/python3/Release/cv2.pyd` to [`cv2/python-3`](cv2/python-3)
-  - Verify all files in [`cv2/python-3`](cv2/python-3) with [`pyd_dll`](cv2/python-3/pyd_dll)
-  - Verify the cuda toolkit path in [`config.py`](cv2/config.py)
   - Create WHL -> Run [`create_whl.cmd`](create_whl.cmd)
+* Locate the newly created wheel and install
 * Test your `cv2`
   ```
   import cv2

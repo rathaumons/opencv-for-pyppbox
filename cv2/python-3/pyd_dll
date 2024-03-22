@@ -1,6 +1,5 @@
 cv2.pyd
 opencv_aruco4xx.dll
-opencv_barcode4xx.dll
 opencv_bgsegm4xx.dll
 opencv_bioinspired4xx.dll
 opencv_calib3d4xx.dll
@@ -19,9 +18,9 @@ opencv_fuzzy4xx.dll
 opencv_gapi4xx.dll
 opencv_hfs4xx.dll
 opencv_highgui4xx.dll
-opencv_img_hash4xx.dll
 opencv_imgcodecs4xx.dll
 opencv_imgproc4xx.dll
+opencv_img_hash4xx.dll
 opencv_intensity_transform4xx.dll
 opencv_line_descriptor4xx.dll
 opencv_mcc4xx.dll
