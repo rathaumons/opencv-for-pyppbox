@@ -2,7 +2,7 @@
 
 ##  `pyppbox-opencv` | `opencv-contrib-python` | `cv2`
 
-* Updated: **October 6, 2023**
+* Updated: **March 22, 2024**
 * Requirements: `['numpy>=1.26.4; python_version=="3.12.*"']`
 * CUDA & cuDNN are included in the package.
 * The supported hardware for **Python 3.12** + **CUDA 12.1**:
@@ -106,7 +106,7 @@
   - Copy `cublas64_12.dll`, `cublasLt64_12.dll`, and `cudnn64_8.dll` from `{CUDA toolkit path}/CUDA/v12.1/bin` to [`cv2/cuda_bin`](cv2/cuda_bin) 
   - Copy `cvbuild/install/x64/vc16/bin/*` to [`cv2/python-3`](cv2/python-3)
   - Create WHL -> Run [`create_whl.cmd`](create_whl.cmd)
-* Locate the newly created wheel and install
+* Locate and install the newly created wheel
 * Test your `cv2`
   ```
   import cv2
