@@ -1,0 +1,11 @@
+::    GitHub: https://github.com/rathaumons/opencv-for-pyppbox
+::    Copyright (C) 2024 rathaROG
+
+@echo off
+setlocal
+cd /d %~dp0
+set "PYTHONWARNINGS=ignore"
+python -m pip install --upgrade pip
+pip install setuptools wheel build
+python -m build --wheel --skip-dependency-check --no-isolation
+pause

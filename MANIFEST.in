@@ -1,0 +1,6 @@
+include *.md *.in *.txt LICENSE
+recursive-include cv2 *.*
+recursive-include cv2 *.pyi
+global-include cv2/*.*
+global-exclude */__pycache__
+global-exclude *.pyc *.cmd
