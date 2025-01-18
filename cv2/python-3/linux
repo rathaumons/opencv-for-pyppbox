@@ -1,0 +1,22 @@
+cuda_cudnn                      libopencv_features2d.so.411           libopencv_rgbd.so.411
+cv2.abi3.so                     libopencv_flann.so.411                libopencv_saliency.so.411
+libcublasLt.so.12               libopencv_freetype.so.411             libopencv_shape.so.411
+libcublas.so.12                 libopencv_fuzzy.so.411                libopencv_signal.so.411
+libcudnn_cnn_infer.so.8         libopencv_gapi.so.411                 libopencv_stereo.so.411
+libcudnn_ops_infer.so.8         libopencv_hfs.so.411                  libopencv_stitching.so.411
+libcudnn.so.8                   libopencv_highgui.so.411              libopencv_structured_light.so.411
+libOpenCL.so.1                  libopencv_imgcodecs.so.411            libopencv_superres.so.411
+libopencv_alphamat.so.411       libopencv_img_hash.so.411             libopencv_surface_matching.so.411
+libopencv_aruco.so.411          libopencv_imgproc.so.411              libopencv_text.so.411
+libopencv_bgsegm.so.411         libopencv_intensity_transform.so.411  libopencv_tracking.so.411
+libopencv_bioinspired.so.411    libopencv_line_descriptor.so.411      libopencv_videoio.so.411
+libopencv_calib3d.so.411        libopencv_mcc.so.411                  libopencv_video.so.411
+libopencv_ccalib.so.411         libopencv_ml.so.411                   libopencv_videostab.so.411
+libopencv_core.so.411           libopencv_objdetect.so.411            libopencv_wechat_qrcode.so.411
+libopencv_cudev.so.411          libopencv_optflow.so.411              libopencv_xfeatures2d.so.411
+libopencv_datasets.so.411       libopencv_phase_unwrapping.so.411     libopencv_ximgproc.so.411
+libopencv_dnn_objdetect.so.411  libopencv_photo.so.411                libopencv_xobjdetect.so.411
+libopencv_dnn.so.411            libopencv_plot.so.411                 libopencv_xphoto.so.411
+libopencv_dnn_superres.so.411   libopencv_quality.so.411              linux
+libopencv_dpm.so.411            libopencv_rapid.so.411
+libopencv_face.so.411           libopencv_reg.so.411
