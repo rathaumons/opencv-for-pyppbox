@@ -1,6 +1,6 @@
 # Customized OpenCV for [`pyppbox`](https://github.com/rathaumons/pyppbox)
 
-##  `pyppbox-opencv` | `opencv-contrib-python` | `cv2`
+##  `pyppbox-opencv` | `opencv-python` | `opencv-contrib-python`
 
 * Updated: **January 11, 2025**
 * Requirements: `['numpy>=1.26.4; python_version=="3.11.*"']`
